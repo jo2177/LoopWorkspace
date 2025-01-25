@@ -276,6 +276,7 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
+          # Instructions for adding Dana pump to Loop 3.4.4
           echo "Update to Fastlane 2.225.0"
           curl https://github.com/loopandlearn/LoopWorkspace/commit/8f8d742fae10d264e357af5624f7616ecd5ca973.patch | git apply
           echo "Downloading code to support Dana pump"
