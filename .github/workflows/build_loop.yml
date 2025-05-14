@@ -283,7 +283,8 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
-      # Instructions for adding Dana pump to Loop 3.6.0
+          
+          # Instructions for adding Dana pump to Loop 3.6.0
           echo "Downloading code to support Dana pump"
           git clone https://github.com/loopandlearn/DanaKit
           echo "Applying customization to add Dana support to Loop"
