@@ -18,6 +18,12 @@ xcodebuild -scheme LoopWorkspace -exportLocalizations -localizationPath xclocs $
 mkdir -p xliff_out
 find xclocs -name '*.xliff' -exec cp {} xliff_out \;
 
+if (( ${#FILE_ORIGINAL_PATHS_TO_REMOVE[@]} > 0 )); then
+    echo ""
+    echo "Removing phantom xliff sections..."
+    python3 Scripts/remove_xliff_sections.py xliff_out "${FILE_ORIGINAL_PATHS_TO_REMOVE[@]}"
+fi
+
 echo ""
 echo "Next step is to upload the xliff_out files to lokalise with"
 echo "./Scripts/manual_upload_to_lokalise.sh"
